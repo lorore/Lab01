@@ -18,10 +18,10 @@ public class FXMLController {
 	
 	Parole elenco ;
 	Parole2 elenco2;
-	long o1;
-	long o2;
-	long result1;
-	long result2;
+	double o1;
+	double o2;
+	double result1;
+	double result2;
     @FXML
     private ResourceBundle resources;
 
@@ -56,7 +56,7 @@ public class FXMLController {
     	elenco2.addParola(txtParola.getText());
     	o2=System.nanoTime();
     	result2=o2-o1;
-    	txtOrari.setText("arrayList: "+Long.toString((result1))+" "+"linkedList: "+Long.toString((result2)));
+    	txtOrari.setText("arrayList: "+Double.toString((result1))+" "+"linkedList: "+Double.toString((result2)));
     	String result="";
     	for(String s: elenco.getElenco()) {
     		result+=s+"\n";
@@ -76,7 +76,7 @@ public class FXMLController {
     	elenco2.reset();
     	o2=System.nanoTime();
     	result2=o2-o1;
-    	txtOrari.setText("arrayList: "+Long.toString((result1))+" "+"linkedList: "+Long.toString((result2)));
+    	txtOrari.setText("arrayList: "+Double.toString((result1))+" "+"linkedList: "+Double.toString((result2)));
     	
     	
     	
@@ -100,7 +100,7 @@ public class FXMLController {
     	elenco2.cancellaParola(p);
     	o2=System.nanoTime();
     	result2=o2-o1;
-    	txtOrari.setText("arrayList: "+Long.toString((result1))+" "+"linkedList: "+Long.toString((result2)));
+    	txtOrari.setText("arrayList: "+Double.toString((result1))+" "+"linkedList: "+Double.toString((result2)));
     
     	String result="";
     	if(elenco.getElenco().size()==0)
